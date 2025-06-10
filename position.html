@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postion</title>
+    <style>
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            background-color: orange;
+            padding: 20px;
+        }
+
+        .parent {
+            position: relative;
+            background-color: lightpink;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .child {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: lightgreen;
+            color: white;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 70%;
+            right: 50%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 5px;
+            display: none;
+        }
+
+        .tooltip-container:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    1) position : static (default)
+    it can not use top,left,right,bottom etc.
+
+    2) postion : relative
+        keeps space in the flow
+        move relatve to its original spot using top left etc
+
+        useful foe being the anchor for absolutely positioned chile element.
+
+    3) position : absolute
+          removed from normal flow
+
+          positioned relative to nearest positioned ancestor(relative,absolute,fixed)
+
+          if nonw , it uses the <html> (view port)
+
+    
+    4) position : fixed
+          removed from the flow
+
+          positioned relative to viewport - never moves even scroll
+
+          always stay in place
+
+    5)position : sticky
+    
+          acts like relative at first
+
+          becomes fixed when it reaches a top,leftetc offset during scroll
+
+          only work inside scrollable containers.
+
+     -->
+
+    <div class="static-box">
+        static box
+    </div>
+
+    <div class="relative-box">
+        relative box
+    </div>
+
+    <div class="parent">
+        parent
+        <div class="child">
+            child abosulte
+        </div>
+    </div>
+
+    <div class="fixed-box">
+        fixed box
+    </div>
+
+
+
+    <div class="sticky-header">sticky header</div>
+    <div class="content">...Lots of content here ..l Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+        ad ipsam expedita possimus veritatis esse non modi itaque rerum quidem optio qui ratione quos id? Doloribus odit
+        nesciunt reprehenderit tenetur.</div>
+
+    <div style="height: 1000px;"></div>
+
+
+    <div class="tooltip-container">
+        hover me
+        <div class="tooltip">
+            tooltip appears here
+        </div>
+    </div>
+
+</body>
+
+</html>
