@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 20PX;
+        }
+
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: orange;
+            padding: 20px;
+        }
+
+        .parent {
+            position: relative;
+            background-color: #eee;
+            width: 200px;
+            height: 200px;
+        }
+
+        .child {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+        }
+
+        .fixed-box {
+            position: fixed;
+            top: 70%;
+            right: 35%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+
+        .e {
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- DEFAULT -->
+    <div class="static-box">
+        Static Box
+    </div>
+
+    <div class="relative-box">
+        Relative Box
+    </div>
+
+    <div class="parent">
+        relative Parent
+        <div class="child">
+            Abosulte child
+        </div>
+    </div>
+
+    <div class="fixed-box">
+        Fixed Box
+    </div>
+    <div class="e">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive cards without media query</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 20px;
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card h3 {
+            padding: 10px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Responsive cards no media query </h1>
+    <div class="card-grid">
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 1</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 2</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 3</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 4</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 5</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 6</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 7</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 8</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 9</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 10</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 11</h3>
+        </div>
+        <div class="card"><img src="./image/cars.jpg" alt="">
+            <h3>Card 12</h3>
+        </div>
+    </div>
+</body>
+
+</html>

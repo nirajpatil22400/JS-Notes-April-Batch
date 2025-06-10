@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Default styles for desktop */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* media query for screens smaller than or equal to 768px */
+        @media (max-width:768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid #666;
+
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            header,
+            footer {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Responsive website</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Welcome!</h2>
+            <p>This is simple responsive website</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>$copy ; 2025 My Website</p>
+    </footer>
+</body>
+
+</html>
