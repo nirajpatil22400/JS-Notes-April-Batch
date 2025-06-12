@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Label Like Screenshot</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            /* Change this to test */
+            padding: 50px;
+        }
+
+        .form-wrapper {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            background-color: inherit; 
+        }
+
+        .custom-label {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            transform: translateY(50%);
+            /* background-color: ; */
+            /* Must match page background */
+            padding: 2px 4px;
+            font-weight: bold;
+            color: #333;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-wrapper">
+        <input type="text" id="name" />
+        <label for="name" class="custom-label">Name</label>
+    </div>
+
+</body>
+
+</html>

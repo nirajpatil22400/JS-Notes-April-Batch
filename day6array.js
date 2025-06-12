@@ -3,8 +3,9 @@ Q1
 What is an Array in JavaScript?
 An array is a special variable that can hold multiple values in a single variable using index-based access.
 */
-
+                                     
 let fruits = ["apple", "banana", "cherry"];
+
 
 /*
 Each element in the array can be accessed by its index (starting from 0).
@@ -39,12 +40,10 @@ To store and manipulate lists of data (e.g., user names, product list)
 Q4
 If We Don’t Use Arrays?
 Without arrays:
-
 You'll need many separate variables
 Data becomes hard to manage
 Loops become useless
 Operations like sorting, searching become tedious
-
 /*
 
 /*
