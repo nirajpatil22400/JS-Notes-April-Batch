@@ -127,7 +127,7 @@ console.log(email.includes("@") && email.includes(".")); // true
 // .toLowerCase()	      All lowercase	                      New string
 // .indexOf(x)	          Index of substring	              Number or -1
 // .includes(x)	          If substring exists	              Boolean
-// .slice()	              Extract part of string	          New string
+// .slice()	             Extract part of string	          New string
 // .replace()	          Replace first match	              New string
 // .split()	              Split into array	                  Array
 // .trim()	              Remove start/end spaces	          New string

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slider {
+            width: 90%;
+            max-width: 900px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .slides {
+            display: flex;
+            width: 500%;
+            height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .slide {
+            width: 20%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.8));
+            padding: 20px 30px;
+            border-radius: 10px;
+            max-width: 80%;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .overlay-text h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #00e1ff;
+        }
+
+        .overlay-text p {
+            font-size: 16px;
+            color: #f1f1f1;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .navigation-manual {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .manual-btn {
+            border: 2px solid#fff;
+            padding: 6px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .manual-btn:hover {
+            background: #fff;
+        }
+
+        @keyframes slide {
+            0% {
+                margin-left: 0;
+            }
+
+            20% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: -100%;
+            }
+
+            45% {
+                margin-left: -100%;
+            }
+
+            50% {
+                margin-left: -200%;
+            }
+
+            70% {
+                margin-left: -200%;
+            }
+
+            75% {
+                margin-left: -300%;
+            }
+
+            95% {
+                margin-left: -300%;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="./image/cars.jpg" alt="car">
+                <div class="overlay-text">
+                    <h2>Drive the Future</h2>
+                    <p>Experience performance, power, and precision like never before.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./image/nature1.jpg" alt="cnayure">
+                <div class="overlay-text">
+                    <h2>Born to Race</h2>
+                    <p>Unleash your inner racer with cutting-edge design.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./image/cars.jpg" alt="car">
+                <div class="overlay-text">
+                    <h2>Explore Freely</h2>
+                    <p>Adventure awaits on evry road your choose./p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./image/nature1.jpg" alt="nature">
+                <div class="overlay-text">
+                    <h2>Elegance Meets Power</h2>
+                    <p>Where timeless design and modern engineering meet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manual buttons (optional) -->
+    <div class="navigation-manual">
+        <div class="manual-btn"></div>
+        <div class="manual-btn"></div>
+        <div class="manual-btn"></div>
+        <div class="manual-btn"></div>
+    </div>
+</body>
+
+</html>

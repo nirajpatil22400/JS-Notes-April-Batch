@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hard HTML & CSS Tasks</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #121212;
+            color: white;
+            padding: 2rem;
+        }
+
+        h2 {
+            margin: 2rem 0 1rem;
+            color: #00e1ff;
+            text-decoration: underline;
+        }
+
+        /* Task 1: Responsive Dashboard Grid */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Task 2: CSS Modal */
+        .modal-button {
+            margin-top: 2rem;
+            background: #00e1ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .modal:target {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        .modal-content {
+            background: white;
+            color: black;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            text-decoration: none;
+            color: red;
+            font-size: 20px;
+        }
+
+        /* Task 3: Flip Card */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .flip-card-front {
+            background: #00e1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        .flip-card-back {
+            background: #1e1e1e;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Task 4: Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 3px solid #00e1ff;
+        }
+
+        .event {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #00e1ff;
+            border-radius: 50%;
+        }
+
+        /* Task 5: Spinner */
+        .spinner {
+            margin: 2rem auto;
+            width: 50px;
+            height: 50px;
+            border: 6px solid #ddd;
+            border-top-color: #00e1ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Task 6: Pricing Table */
+        .pricing {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .price-card {
+            padding: 2rem;
+            background: #1e1e1e;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            transition: transform 0.3s;
+        }
+
+        .price-card.middle {
+            transform: scale(1.05);
+            background: #00e1ff;
+            color: black;
+        }
+
+        .price-card:hover {
+            transform: scale(1.1);
+        }
+
+        /* Task 7: Sticky Sidebar */
+        .layout {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            padding: 1rem;
+            background: #333;
+            width: 200px;
+        }
+
+        .content {
+            height: 1000px;
+            padding: 1rem;
+            background: #1e1e1e;
+            flex: 1;
+        }
+
+        /* Task 8: Tooltip */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            margin: 2rem;
+        }
+
+        .tooltip-container .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        /* Task 9: Navigation Dropdown */
+        .navbar {
+            background: #1e1e1e;
+            padding: 1rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background: #333;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Task 10: Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?nature,water') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content button {
+            background: #00e1ff;
+            color: black;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .hero-content button:hover {
+            box-shadow: 0 0 20px #00e1ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Task 1: Responsive Dashboard Grid</h2>
+    <div class="dashboard">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Responsive content</p>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Adapts with grid</p>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Flexibility is key</p>
+        </div>
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>Auto-fit layout</p>
+        </div>
+    </div>
+
+    <h2>Task 2: Modal Popup</h2>
+    <a href="#popup" class="modal-button">Open Modal</a>
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <h3>Modal Title</h3>
+            <p>This modal appears without JS</p>
+        </div>
+    </div>
+
+    <h2>Task 3: Flip Card</h2>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h3>Niraj</h3>
+            </div>
+            <div class="flip-card-back">
+                <p>Java Developer</p>
+                <p>LinkedIn | GitHub</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Task 4: Timeline</h2>
+    <div class="timeline">
+        <div class="event"><strong>2022</strong> - Joined College</div>
+        <div class="event"><strong>2023</strong> - Internship Completed</div>
+        <div class="event"><strong>2024</strong> - Final Year Project</div>
+    </div>
+
+    <h2>Task 5: Loading Spinner</h2>
+    <div class="spinner"></div>
+
+    <h2>Task 6: Pricing Cards</h2>
+    <div class="pricing">
+        <div class="price-card">Basic Plan</div>
+        <div class="price-card middle">Pro Plan</div>
+        <div class="price-card">Enterprise Plan</div>
+    </div>
+
+    <h2>Task 7: Sticky Sidebar</h2>
+    <div class="layout">
+        <div class="sidebar">Sticky Sidebar</div>
+        <div class="content">Main content scrolls here</div>
+    </div>
+
+    <h2>Task 8: Tooltip</h2>
+    <div class="tooltip-container">
+        <button>Hover me</button>
+        <span class="tooltip-text">This is a tooltip</span>
+    </div>
+
+    <h2>Task 9: Navbar Dropdown</h2>
+    <nav class="navbar">
+        <div>Home</div>
+        <div>About</div>
+        <div class="dropdown">
+            Services
+            <div class="dropdown-content">Web Dev<br>SEO</div>
+        </div>
+        <div>Contact</div>
+    </nav>
+
+    <h2>Task 10: Hero Section</h2>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Future</h1>
+            <button>Explore</button>
+        </div>
+    </div>
+</body>
+
+</html>
