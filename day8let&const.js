@@ -23,14 +23,14 @@ let name = "Niraj";
 
 // Block Scope:
 
-let x = 10; // global variable
+// let x = 10; // global variable
 
 if (true) {
   let x = 20; // New variable x inside block // local variable
   console.log(x); // 20
 }
-
-console.log(x); // 10
+console.log(x);
+// console.log(x); // 10
 
 /*
 A variable named x is declared using let and given the value 10.

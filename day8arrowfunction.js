@@ -1,4 +1,4 @@
-// What is an Arrow Function?
+//C
 // Arrow Functions were introduced in ES6 and provide a shorter syntax for writing functions.
 // Basic Syntax:
 
@@ -15,7 +15,7 @@ const add = (a, b) => {
 console.log(add(5, 3)); // 8
 
 // Key Differences Between Arrow Functions & Regular Functions
-// Feature	Regular Function	Arrow Function
+// Feature	           Regular Function	           Arrow Function
 // Syntax	         Long (function keyword)	  Short and clean
 // this keyword	     Has its own this	          Inherits this from parent
 // Constructor	     Can be used as constructor	  Cannot be used as constructor
