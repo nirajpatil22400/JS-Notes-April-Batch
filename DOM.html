@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        .blue-box {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .highlighted {
+            border: 2px dashed red;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            background: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="mainHeading">Welcome to DOM</h1>
+
+    <p class="info">This is the first paragraph.</p>
+    <p class="info">This is the second paragraph.</p>
+
+    <input type="text" id="nameBox" value="Niraj" />
+    <button onclick="updateName()">Update Name</button>
+
+    <div id="box" class="blue-box">Box Element</div>
+
+    <img id="photo" src="https://via.placeholder.com/100" />
+
+    <button onclick="toggleBox()">Toggle Highlight</button>
+    <button onclick="createNewParagraph()">Add New Paragraph</button>
+
+    <script>
+        // Get element by ID
+        const heading = document.getElementById("mainHeading");
+        console.log("innerText:", heading.innerText);
+        console.log("innerHTML:", heading.innerHTML);
+
+        // querySelector and querySelectorAll
+        const firstInfo = document.querySelector(".info");
+        const allInfo = document.querySelectorAll(".info");
+
+        console.log("First Info:", firstInfo.innerText);
+        allInfo.forEach((el, i) => {
+            console.log(`Paragraph ${i + 1}:`, el.innerText);
+        });
+
+        // input value
+        function updateName() {
+            const input = document.getElementById("nameBox");
+            const name = input.value;
+            heading.innerText = `Welcome, ${name}!`;
+        }
+
+        // Attribute manipulation
+        const img = document.getElementById("photo");
+        img.setAttribute("alt", "Profile Image");
+        console.log("Image src:", img.getAttribute("src"));
+
+        // Class and Style manipulation
+        const box = document.getElementById("box");
+
+        function toggleBox() {
+            box.classList.toggle("highlighted");
+            box.style.fontWeight = "bold";
+            box.style.color = "darkblue";
+        }
+
+        // Create and append new element
+        function createNewParagraph() {
+            const newP = document.createElement("p");
+            newP.innerText = "This is a new paragraph added dynamically!";
+            newP.style.backgroundColor = "#f9f9f9";
+            newP.style.padding = "8px";
+            document.body.appendChild(newP);
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+
+ What This Code Covers:
+Feature	Where It’s Used
+getElementById()	#mainHeading, #box, #photo
+querySelector, querySelectorAll	.info paragraphs
+innerText, innerHTML, value	Updating text from input
+setAttribute, getAttribute	Image alt and src
+classList.add/remove/toggle	Toggle highlight class
+style.property	Add font weight, color, background
+createElement, appendChild	Add new paragraph dynamically
+
+
+1. DOM Manipulation Overview
+The DOM stands for Document Object Model. It represents the structure of an HTML document that JavaScript can interact with.
+
+Using DOM methods, you can:
+
+Select HTML elements
+
+Read or change their content
+
+Change their style or attributes
+
+Add or remove elements dynamically
+
+2. Selecting Elements
+document getElementById
+Used to select a single element by its unique ID.
+Example: Selecting an element like main heading, box, or photo.
+
+document querySelector
+Selects the first matching element using a CSS-style selector.
+Example: Selecting the first paragraph with class info.
+
+document querySelectorAll
+Selects all matching elements using a CSS-style selector.
+Returns a list of all matched elements.
+Example: Selecting all info paragraphs.
+
+3. Working with Text and Values
+innerText
+Gets or sets the visible text content of an element.
+It only includes text that is visible to the user.
+
+innerHTML
+Gets or sets the complete HTML content inside an element, including tags.
+
+value
+Used with form elements like input, textarea, and select.
+Gets or sets the value entered by the user.
+
+Example use case: Reading the text from an input box and displaying it somewhere on the page.
+
+4. Working with Attributes
+setAttribute
+Sets or updates the value of an attribute on an HTML element.
+Example: Set the source or alt text of an image.
+
+getAttribute
+Gets the value of an attribute from an HTML element.
+Example: Read the alt text or link target.
+
+5. Working with Classes
+classList add
+Adds a class to the element.
+
+classList remove
+Removes a class from the element.
+
+classList toggle
+Adds the class if it is not present, and removes it if it is already there.
+
+Example: Toggle a highlight class when the user clicks a button.
+
+6. Styling Elements
+style property
+Used to change CSS properties directly from JavaScript.
+
+Example:
+
+Change font weight
+
+Change text color
+
+Change background color
+
+7. Creating and Appending Elements
+createElement
+Creates a new HTML element.
+
+appendChild
+Adds a newly created element to the DOM, inside a parent element.
+
+Example:
+
+Create a new paragraph
+
+Add it below an existing div on the page
+
+8. Feature Summary Table
+Feature	Where It Is Commonly Used
+getElementById	main heading, box, photo
+querySelector, querySelectorAll	info paragraphs
+innerText, innerHTML, value	updating text or reading input
+setAttribute, getAttribute	image alt text, source attributes
+classList add, remove, toggle	highlighting or hiding elements
+style property	changing colors, font size, spacing
+createElement, appendChild	adding paragraphs or list items dynamically
+
+
+-->
