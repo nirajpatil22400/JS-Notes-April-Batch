@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>addEventListener Demo</title>
+</head>
+
+<body>
+
+    <input id="nameInput" placeholder="Type your name" />
+    <button id="greetBtn">Greet</button>
+
+    <h2 id="output"></h2>
+
+    <script>
+        const input = document.getElementById("nameInput");
+        const button = document.getElementById("greetBtn");
+        const output = document.getElementById("output");
+
+        // Click Event
+        button.addEventListener("click", () => {
+            const name = input.value;
+            output.innerText = `Hello, ${name || "Guest"}!`;
+        });
+
+        // Keydown Event
+        input.addEventListener("keydown", (event) => {
+            console.log(`You pressed: ${event.key}`);
+        });
+
+        // Focus Event
+        input.addEventListener("focus", () => {
+            input.style.borderColor = "yellow";
+            input.style.border = "5px solid yellow";
+        });
+
+        // Blur Event
+        input.addEventListener("blur", () => {
+            input.style.borderColor = "blue";
+        });
+    </script>
+
+</body>
+
+</html>
