@@ -16,7 +16,7 @@ try {
 
 try {
   let user = JSON.parse('{"name":"Niraj"}'); // correct JSON
-  console.log(user.name);
+  console.log(user.name);//Niraj
 } catch (err) {
   console.log("Something went wrong:", err.message);
 }
@@ -146,11 +146,11 @@ Use it for cleanup, closing DB connections, hiding loaders, etc.
 //  Example:
 try {
   let result = 10 / 2;
-  console.log("Result:", result);
+  console.log("Result:", result); //5
 } catch (err) {
-  console.log("Error:", err.message);
+  console.log("Error:", err.message); //skipped
 } finally {
-  console.log("This will always run.");
+  console.log("This will always run.");//This will always run.
 }
 
 /*

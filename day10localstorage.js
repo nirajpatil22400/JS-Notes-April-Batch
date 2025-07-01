@@ -413,3 +413,4 @@ localStorage.removeItem("name");
 // Remove all data from local storage
 
 localStorage.clear();
+
