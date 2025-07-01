@@ -221,3 +221,220 @@ do {
   console.log("z is :" + z);
   z++;
 } while (z < 0);
+
+
+/*
+ For Loop (20)
+Print numbers from 1 to 10 using a for loop.
+
+Print even numbers from 1 to 20.
+
+Print odd numbers from 1 to 20.
+
+Print numbers in reverse from 10 to 1.
+
+Print the multiplication table of 5.
+
+Find the sum of numbers from 1 to 100.
+
+Print square of numbers from 1 to 10.
+
+Count how many numbers between 1–50 are divisible by 3.
+
+Print all characters in the string "JavaScript" using a loop.
+
+Print first 10 natural numbers.
+
+Find the factorial of a number using a for loop.
+
+Print every second number (step of 2) from 1 to 20.
+
+Loop through an array and print each element.
+
+Print the index and value of each element in an array.
+
+Print numbers from 1 to 10, but skip number 5.
+
+Break the loop if the number equals 7.
+
+Check if a number is prime (use loop).
+
+Reverse a string using a for loop.
+
+Print only the vowels from a string.
+
+Convert a string to uppercase using a loop.
+
+While Loop (10)
+Print numbers from 1 to 10 using a while loop.
+
+Print numbers in reverse from 10 to 1.
+
+Sum numbers from 1 to 100 using while.
+
+Print the multiplication table of 3 using while.
+
+Print the characters of a string using while.
+
+Find how many digits a number has.
+
+Count down from 20 to 0, step of 2.
+
+Find the smallest number divisible by 7 greater than 30.
+
+Add numbers entered by user until they type 0.
+
+Find the sum of even numbers from 1 to 50.
+
+Do While Loop (10)
+Print numbers from 1 to 10 using do...while.
+
+Run a loop at least once even if condition is false.
+
+Add numbers until the total is greater than 100.
+
+Read a number and keep printing square until user inputs negative number.
+
+Print lowercase alphabet using ASCII codes.
+
+Show the menu repeatedly until user presses "Exit".
+
+Print Fibonacci series first 10 terms.
+
+Reverse digits of a number using loop.
+
+Print a star pattern of 5 rows.
+
+Take user input until they type "stop".
+
+Medium Level Tasks (40)
+For Loop (20)
+Find all numbers between 1–100 that are divisible by both 3 and 5.
+
+Find the largest number in an array.
+
+Count the number of vowels and consonants in a string.
+
+Count frequency of each character in a string.
+
+Remove all spaces from a string.
+
+Count how many even numbers are in an array.
+
+Calculate power of a number (x^n) using loop.
+
+Print pattern:
+1
+12
+123
+1234
+Print pyramid pattern of stars.
+
+Find GCD (HCF) of two numbers using loop.
+
+Find LCM of two numbers using loop.
+
+Count total digits in a number.
+
+Separate digits of a number and print them.
+
+Check if a string is a palindrome using loop.
+
+Find the second largest number in an array.
+
+Loop through an array and double each value.
+
+Merge two arrays using loop.
+
+Print first 10 prime numbers.
+
+Find sum of all numbers in an array using loop.
+
+Create a new array with squares of elements using a loop.
+
+While / Do While Loop (20)
+Generate random numbers until you get a number > 90.
+
+Calculate factorial using while loop.
+
+Find average of N numbers entered by the user.
+
+Count digits of a number using while.
+
+Extract each character from a string using while.
+
+Find the sum of digits of a number.
+
+Keep taking input until user enters a number divisible by 5.
+
+Keep printing "Loading..." until the value reaches 100.
+
+Take input until the total reaches or exceeds 500.
+
+Display a countdown timer from 10 to 0.
+
+Show a menu repeatedly until user types "exit".
+
+Reverse a number using while.
+
+Keep checking if a number is even or odd until user enters "stop".
+
+Accept 5 values and store in an array using loop.
+
+Simulate login: keep asking for password until correct.
+
+Loop to show math questions until 3 wrong answers.
+
+Do-while loop to ensure at least 1 number is entered.
+
+Convert a decimal number to binary using loop.
+
+Convert a binary string to decimal using loop.
+
+Take numbers from user and find max and min.
+
+Hard Level Tasks (20)
+Build a multiplication table (1–10) using nested loops.
+
+Check if a number is Armstrong using loop.
+
+Find the number of words in a sentence.
+
+Detect and remove duplicate elements in an array.
+
+Print Floyd’s Triangle.
+
+Print Pascal’s Triangle using loop logic.
+
+Rotate elements in an array by 1 using loop.
+
+Reverse an array without using .reverse().
+
+Generate prime numbers between two user-given limits.
+
+Create a number pyramid pattern using loop:
+    1
+   2 2
+  3 3 3
+Write a loop that encrypts a message (Caesar cipher).
+
+Simulate calculator using switch and loop (menu-driven).
+
+Store 5 student scores, then print who passed and failed.
+
+Write a game that gives 3 tries to guess a number.
+
+Convert temperature from Celsius to Fahrenheit in loop.
+
+Loop through object properties and print key-value pairs.
+
+Create a loop-based menu system (Add, View, Delete).
+
+Loop through nested arrays and flatten them.
+
+Generate all combinations of a 3-digit number using loop.
+
+Print diamond pattern using stars.
+
+
+ */

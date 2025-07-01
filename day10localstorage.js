@@ -414,3 +414,72 @@ localStorage.removeItem("name");
 
 localStorage.clear();
 
+/*
+Add a click event listener to a button that logs "Button clicked!" to the console.
+
+Create a text input and button. On button click, log the input’s value using addEventListener.
+
+Use localStorage.setItem() to store a name string when a button is clicked.
+
+Use localStorage.getItem() to retrieve and display a saved name.
+
+Use localStorage.removeItem() to delete a specific key.
+
+Use localStorage.clear() to remove all stored data.
+
+Store an object (e.g., user info) in localStorage using JSON.stringify().
+
+Retrieve and convert the stored object using JSON.parse().
+
+Add an event listener for the mouseover event to change background color.
+
+Store and retrieve a user's theme (dark/light) preference in localStorage.
+
+Create a simple form that saves name and email to localStorage on submit.
+
+On page load, auto-fill the form fields using localStorage.getItem().
+
+Add a "Clear Form" button that clears the fields and removes the values from localStorage.
+
+Use addEventListener with keydown event to show which key is being pressed.
+
+Create a counter app with + / - buttons and save the count in localStorage.
+
+Create a task list where tasks are added to localStorage using stringify.
+
+Display tasks on page load by parsing them from localStorage.
+
+Add a delete button next to each task that removes it from both DOM and localStorage.
+
+Implement a dark mode toggle that saves the theme in localStorage.
+
+Use input event listener to save notes in localStorage while typing.
+
+Build a mini to-do app that:
+
+Adds, edits, deletes tasks
+
+Stores everything in localStorage
+
+Loads saved tasks on refresh
+
+Create a notes app where each note is saved using setItem() with a unique key.
+
+Build a login mockup where name/email is saved and shown after page reload using localStorage.
+
+Use JSON.stringify() to store an array of objects in localStorage.
+
+Build a color palette selector. On click, save the selected color. On reload, apply it.
+
+Create a shopping cart system where selected items are stored in localStorage.
+
+Save a blog post (title + content) to localStorage and display all saved posts.
+
+Build a quiz app where the score is saved and shown from localStorage even after refresh.
+
+Store scroll position on page unload, and restore it on load.
+
+Create a tab-switcher layout and store the active tab in localStorage so it persists.
+
+
+*/
