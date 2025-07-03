@@ -1,0 +1,16 @@
+h1 {
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+.container {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: purple;
+  color: white;
+  font-size: 20px;
+}
+#inline {
+  background-color: orangered;
+  color: whitesmoke;
+}

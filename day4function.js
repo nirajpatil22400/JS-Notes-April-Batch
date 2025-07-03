@@ -76,4 +76,7 @@ const counter = (function() {
 })();
 
 counter(); // Count: 1
-counter(); // Count: 2
+counter(); // Count:
+
+
+
