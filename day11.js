@@ -322,3 +322,5 @@ console.log(double(5)); // Output: 10
 // call()	                           Yes	                      Individually	                 No
 // apply()                         	 Yes	                        As array	                   No
 // bind()	                           No	                   Individually or partial	          Yes
+
+

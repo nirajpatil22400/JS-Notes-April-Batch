@@ -20,7 +20,7 @@
 <body>
     <h1 style="color: red;">HTML LIST:</h1>
     <h2 class="ol">order list</h2>
-    <ol type="i">
+    <ol type="a">
         <li id="hhh">HTML</li>
         <li id="hhh">CSS</li>
         <li id="hhh">javscript</li>
@@ -35,19 +35,20 @@
     <dl>
         <dt>HTML</dt>
         <dd>HTML is a markup lang</dd>
+        <p>this is para</p>
     </dl>
 
-    <h3>Nested List</h3>
-    <ol>
-        <li>web designing</li>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>Boostrap</li>
-        </ul>
-        <li>PHP</li>
-    </ol>
+    <h3>Nested<ol>
+            <li>web designing</li>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>Boostrap</li>
+            </ul>
+            <li>PHP</li>
+        </ol> List</h3>
+
 
     <h2>HTML Table</h2>
     <!-- table tag - tr td th -->
@@ -83,6 +84,12 @@
                 <td>76</td>
             </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td>total marks</td>
+                <td>190</td>
+            </tr>
+        </tfoot>
     </table>
 
     <h2>Rowspans </h2>
@@ -118,7 +125,12 @@
             </tr>
             <tr>
                 <td>remember password</td>
-                <td><input type="checkbox"></td>
+
+            </tr>
+            <tr>
+                <td>hobbies</td>
+                <td><input type="checkbox">reading</td>
+                <td><input type="checkbox">travelling</td>
             </tr>
             <tr>
                 <td>Gender:</td>
@@ -128,7 +140,7 @@
             <tr>
                 <td>Photo</td>
                 <td><input type="file"></td>
-                <td><input type="textarea"></td>
+                <td><textarea></textarea></td>
             </tr>
             <tr>
                 <td><input type="button" name="" id="" value="Click"></td>
