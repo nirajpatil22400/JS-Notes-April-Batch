@@ -14,8 +14,8 @@ function Person(name, age) {
   this.age = age;
 }
 
-const niraj = new Person("Niraj", 24);
-const rohan = new Person("Rohan", 22);
+const obj1 = new Person("Niraj", 24);
+const obj2 = new Person("Rohan", 22);
 
 //(c) Object.create()
 //Creates a new object with an existing object as prototype.
